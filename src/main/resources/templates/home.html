@@ -13,14 +13,17 @@
                 <span class="nestedNeonText">all things java</span>
             </h1>
             <div class="cardContainer">
-                <div class="card">
-                    <div class="cardImageHolder"></div>
-                    <div class="cardText">Reverse Engineering Mockito. Part 1. WTF</div>
+                <div th:each="blogPost: ${posts}" class="card">
+                    <a th:href="@{/blog-post/(id=${blogPost.id})}">
+
+                        <div class="card" >
+                            <div class="cardImageHolder"></div>
+                            <div class="cardText" th:text="${blogPost.title}"></div>
+                        </div>
+                    </a>
                 </div>
-                <div class="card">
-                    <div class="cardImageHolder"></div>
-                    <div class="cardText">Reverse Engineering Mockito. Part 2. Dependency Injection</div>
-                </div>
+
+
             </div>
         </div>
     </body>
