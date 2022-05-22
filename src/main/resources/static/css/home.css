@@ -1,0 +1,111 @@
+.container{
+    width:80%;
+    margin: 70px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: "Vibur", sans-serif;
+    flex-direction:column;
+
+
+}
+/* Flickering animation */
+@keyframes flicker {
+
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+
+  }
+
+  20%, 24%, 55% {
+      text-shadow: none;
+  }
+}
+
+.neonText{
+color: #fff;
+animation: flicker 6s infinite alternate;
+  align-text:center;
+  font-size: 3.2rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+
+}
+.nestedNeonText{
+    display:block;
+    margin-top:30px;
+    animation: none;
+    align-text:center;
+    text-align:center;
+    font-size:1.5rem;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+    @media only screen and (min-width: 700px) {
+          font-size: 2.2rem;
+          }
+}
+
+.cardContainer{
+    margin-top:90px;
+    width:100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+}
+.card{
+    justify-self: center;
+        width:250px;
+        height:350px;
+        border:2px solid hsl(317 100% 54%);
+        margin:10px 0px;
+        border-radius:0.25em;
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em;
+        cursor:pointer;
+        box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
+        display:flex;
+        flex-direction:column;
+
+
+}
+.cardImageHolder{
+width:90%;
+  margin:5px auto;
+  border:2px solid #FF3131;
+  height:150px;
+  border-radius:8px;
+}
+.cardText{
+    width:90%;
+    margin:10px auto;
+    font-size:25px;
+    color:#39FF14;
+    text-align:center;
+    overflow:auto;
+}
