@@ -13,17 +13,19 @@
                 <span class="nestedNeonText">all things java</span>
             </h1>
             <div class="cardContainer">
-                <div th:each="blogPost: ${posts}" class="card">
-                    <a th:href="@{/blog-post/(id=${blogPost.id})}">
+                <a th:href="@{blog-post/2}">
+                    <div class="card" >
+                        <div class="cardImageHolder"></div>
+                        <div class="cardText">What is Late Night Java?</div>
+                    </div>
+                </a>
 
-                        <div class="card" >
-                            <div class="cardImageHolder"></div>
-                            <div class="cardText" th:text="${blogPost.title}"></div>
-                        </div>
-                    </a>
-                </div>
-
-
+                <a th:href="@{blog-post/1}">
+                    <div class="card" >
+                        <div class="cardImageHolder"></div>
+                        <div class="cardText" th:text="${title}"></div>
+                    </div>
+                </a>
             </div>
         </div>
     </body>

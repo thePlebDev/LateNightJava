@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LATE NIGHT JAVA</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/newBlogPost.css">
+    <link rel="stylesheet" type="text/css" href="/css/textDisplay.css">
+</head>
+<body>
+<a href="/">
+    <h1 class="headerText">Late Night Java</h1>
+</a>
+<div class="blogPostContainer">
+    <h1 class="blogTitleText" th:text="${title}"></h1>
+    <div class="blogTextBody">
+        <h3 class="headings">Welcome</h3>
+        <ul>
+            <li class="indivText">
+                First off I would like to welcome you to my little corner of the internet. I hope that you can find what you are
+                looking for.
+            </li>
+        </ul>
+        <h3 class="headings">What is Late Night Java?</h3>
+        <ul>
+            <li class="indivText">
+                Late Night Java is a website dedicated to all things Java. Covering topics such as but not limited to,
+                creating an MVC framework, bytecode manipulation, parsing, multithreading and much more. The goal is to create a niche website that
+                will provide questions that are not commonly answered in the Java community.
+            </li>
+        </ul>
+        <h3 class="headings">What is this weird neon theme?</h3>
+        <ul>
+            <li class="indivText">
+                I have created this neon theme out of my love for classic science fiction novels and . I know it may not be appealing to
+                all but I like it. If you are wondering how I created it, I simply googled <span class="highlightedText">css neon text</span>.
+            </li>
+        </ul>
+        <h3 class="headings">The Future of Late night Java</h3>
+        <ul>
+            <li class="indivText">
+                Right now this is just a simple Java focused blog, however, I intend to build it out and to create a community for
+                Java developers. Ultimately I would like this site to be amongst the other top ranked Java sites.
+            </li>
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+</div>
+</body>
+</html>
