@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LATE NIGHT JAVA</title>
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/css/newBlogPost.css">
+    <link rel="stylesheet" type="text/css" href="/css/textDisplay.css">
+</head>
+<body>
+<a href="/">
+    <h1 class="headerText">Late Night Java</h1>
+</a>
+<div class="blogPostContainer">
+    <h1 class="blogTitleText" th:text="${title}"></h1>
+    <div class="blogTextBody">
+        <h3 class="headings">Introduction</h3>
+        <ul>
+            <li class="indivText">
+                If you are like me than you are probably curious about all these complex frameworks we use, like Spring boot.
+                It is one thing to use Spring Boot and another to understand how it works internally. So with this tutorial series lets make our
+                own MVC framework, it won't be as fancy or easy to use as Spring Boot, but it will be ours.
+            </li>
+        </ul>
+
+        <h3 class="headings">Tomcat</h3>
+        <ul>
+            <li class="indivText">
+                The first question that we should answer is, what exactly is Tomcat? Before we can exactly what Tomcat is, we need to
+                provide a little background.
+            </li>
+            <li class="indivText">
+                When a web server receives a request, it first determines whether the resource being requested is static or dynamic in nature.
+                A static resource is one that is identical no matter how many times, or in what order, that resource is requested.
+                These static resources are the HTML and css pages
+            </li>
+            <li class="indivText">
+                The web server handles the request for a static resource by simply fetching the identical resources from the appropriate
+                path in which its static resides, and returning those bytes to the user.
+            </li>
+            <li class="indivText">
+                A dynamic resource is a resource that uses its content based on various factors specific to the user making the request ( call to a database).
+                Most web servers are tuned to deliver blazing fast request handling for static resources. However, they require additional
+                help when dealing with dynamic resources. This help is typically provided by an additional software component that is
+                registered with the web server, called a <span class="highlightedText">Servlet Container</span>(more on servlet containers later).
+            </li>
+            <li class="indivText">
+                When a request comes in that is directed at a dynamic resource(database), the web server simply hands off that request to its
+                associate servlet container. The container then springs into action, invokes the appropriate servlet that delivers the
+                requested dynamic resource. This servlet is responsible for generating the response. The generated response is returned
+                by the servlet container to the web server which, in turn, returns it to the requesting user.
+            </li>
+            <li class="indivText">
+                A servlet in its most basic form is a Java class that acts as a dynamic web resource. In other words, it can be the
+                target of a client browser's request. Java has a whole API dedicated to creating servlets,which can be found
+                <a class="link" href="https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html">HERE</a>
+            </li>
+        </ul>
+        <h3 class="headings">Servlet Container</h3>
+        <div>
+        </div>
+        <ul>
+            <li class="indivText">
+                Ok so with all that background behind us, we can now ask what exactly is <span class="highlightedText">Tomcat?</span> Well, Tomcat is a classified as a
+                <span class="highlightedText">Servlet Container</span>,that is, an environment which servlets can live and prosper. As a container it provides a lot of
+                administrative support to servlets, allowing programmers to focus on the core application logic without having to bother
+                with any low lever specifics, like class loading.
+            </li>
+            <li class="indivText">
+                The primary responsibility of a container is to process an incoming request and to generate a corresponding response
+                that is then returned to the client.
+            </li>
+        </ul>
+
+        <h3 class="headings">What is a Container?</h3>
+        <ul>
+            <li class="indivText">
+                Servlets don't have a <span class="highlightedText">main()</span> method, they are under the control of another Java application called a container.
+                <span class="highlightedText">Tomcat</span>
+                is an example of a container. When our web server application (like Apache) gets a request for a servlet, the server
+                hands the request not to the servlet itself but to the container, in which the servlet is deployed. It's the container
+                that gives the servlet the HTTP request and response, and it's the container that calls the servlet's methods.
+            </li>
+        </ul>
+
+        <h3 class="headings">Conclusion</h3>
+        <ul>
+            <li class="indivText">
+                <span class="highlightedText">Tomcat's</span> main job is to create and handle the lifecycle and mapping of the Java Servlets.
+                This might seem a little confusing right now, but it will make more sense once we start creating with Tomcat
+
+            </li>
+            <li class="indivText">
+                If you have any questions, comments or concerns, please reach out to me on
+                <a class="link" href="https://twitter.com/PlebDevTristan">twitter</a>
+            </li>
+        </ul>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>

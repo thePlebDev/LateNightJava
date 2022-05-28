@@ -1,0 +1,35 @@
+.headings{
+    margin-top:20px;
+    margin-bottom:5px;
+    font-weight:900;
+
+}
+.indivText{
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+    line-height: 1.5;
+}
+
+::marker{
+    color: #39FF14;
+}
+.highlightedText{
+    background:rgba(255, 49, 49, 0.3);
+    padding: 0.1em 0.25em;
+    border-radius:8px;
+}
+.link{
+color: #39FF14;
+    text-shadow:
+        0 0 7px #39FF14,
+        0 0 10px #39FF14,
+        0 0 21px #39FF14,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+
+}
+
