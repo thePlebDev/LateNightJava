@@ -19,6 +19,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Supplier<UsernameNotFoundException> s = ()-> new UsernameNotFoundException("Problem during authentication");
+        System.out.println("WE ARE IN loadUserByUsername");
         User returnedUser = userRepository.findByUsername(username).orElseThrow(s);
 
         return new SecurityUser(returnedUser);
